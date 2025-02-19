@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Birthday Badiduts</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+                color: #333;
+                text-align: center;
+            }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                animation: colorChange 5s infinite;
+            }
+            .images {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+            .images img {
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .images img:first-child,
+            .images img:last-child {
+                width: 200px;
+                height: 200px;
+            }
+            .images img:nth-child(2) {
+                width: 300px;
+                height: 300px;
+            }
+            p {
+                font-size: 1.2rem;
+                max-width: 600px;
+                margin: 1rem 0;
+            }
+            .cake {
+                font-size: 3rem;
+                margin: 1rem 0;
+                animation: bounce 2s infinite;
+            }
+            @keyframes colorChange {
+                0% { color: #ff5252; }
+                25% { color: #ff4081; }
+                50% { color: #7c4dff; }
+                75% { color: #40c4ff; }
+                100% { color: #ff5252; }
+            }
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+            @media (max-width: 600px) {
+                h1 { font-size: 2rem; }
+                .images img { width: 150px; height: 150px; }
+            }
+        </style>
+    </head> 
+    <body>
+        <h1>Happy Birthday Badiduts!!!</h1>
+        <div class="images">
+            <img src="Duha.jpg" alt="Birthday cake">
+            <img src="Badiduts.jpg" alt="Party Decoration">
+            <img src="Nayla.jpg" alt="Gift Boxes">
+        </div>
+        <div class="cake">🎂</div>
+        <p>23 naka badss tiguls na</p>
+        <audio controls autoplay loop>
+            <source src="Happy birthday funny song on tik tok.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>

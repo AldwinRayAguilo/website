@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question for Badidutss</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        #yesBtn:hover, #noBtn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gwapo si Al?</h1>
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        let noCount = 0;
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        yesBtn.addEventListener('click', () => {
+            window.location.href ="Happy Birthday.html";
+        });
+
+        noBtn.addEventListener('click', () => {
+            noCount++;
+            // Increase the size of the Yes button
+            let newSize = 1 + (noCount * 0.2); // Increase by 20% each time
+            yesBtn.style.transform = `scale(${newSize})`;
+            yesBtn.style.transition = 'transform 0.3s ease';
+
+            // Optional: make the No button smaller
+            noBtn.style.transform = `scale(${1 - (noCount * 0.05)})`;
+            noBtn.style.transition = 'transform 0.3s ease';
+
+            // Optional: you can add a maximum size limit if you want
+            if (newSize >= 3) {
+                noBtn.disabled = true;
+                noBtn.textContent = "Sige na, Yes na!";
+            }
+        });
+    </script>
+</body>
+</html>
